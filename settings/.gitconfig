@@ -1,0 +1,5 @@
+[url "ssh://goncalo.barroso@git.ntteo.net/usr/local/ntt/git/"]
+        insteadOf = https://git.ntteo.net/
+[user]
+	name = goncalo.barroso
+	email = goncalo.barroso@headforwards.com
