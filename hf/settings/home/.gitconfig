@@ -3,3 +3,5 @@
 [user]
 	name = goncalo.barroso
 	email = goncalo.barroso@headforwards.com
+[core]
+	excludesfile = ~/.gitignore

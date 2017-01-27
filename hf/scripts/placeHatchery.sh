@@ -64,7 +64,10 @@ do
 		extra)
       shared-services up
       bespin -s $EXTRA up
-      break
+    	break
       ;;
 	esac
 done
+
+clear
+docker ps
