@@ -6,6 +6,7 @@ normal=$(tput sgr0)
 bldred=${bold}$(tput setaf 1) #  red
 
 BESPIN_SERVICES="Glass,Trident,Lobby,Petros,SwaggerUI,Focus,Blur,Cocktail,Zuul,Babel,Shinkansen"
+EXTRA="Glass,Trident,Lobby,Petros,Zuul,Focus,Cocktail,Blur,Babel,SparkCustomerApi,InfluxdbAdapter1,ElasticsearchAdapter,SwaggerUI,StatusPage,Shinkansen,ShinkansenAdapter,BabelIndexer,SparkSystemApi,Vader,SparkOperatorUI"
 
 clear
 
@@ -17,7 +18,7 @@ cd /repos/env/deploy
 
 while :
 do
-	echo -e "Do you wish to ${underline}update${normal} the core bespin stack and shared services? (y/n)"
+	echo -e "Do you wish to ${underline}update${normal} the core bespin stack and shared services? (y/N)"
 	read yn
 	case $yn in
 		y)
@@ -25,21 +26,18 @@ do
 			shared-services pull
 			break
 			;;
-		n)
-			break
-			;;
 		*)
-			echo "Invalid option"
+			break
 			;;
 	esac
 done
 
 while :
 do
-	echo -e "Do you wish to ${underline}shutdown all${normal} of the bespin stack and associated services? (y/n)"
+	echo -e "Do you wish to ${underline}shutdown all${normal} of the bespin stack and associated services? (Y/n)"
 	read yn
 	case $yn in
-		y)
+		*)
 			bespin kill
 			shared-services kill
 			break
@@ -47,18 +45,15 @@ do
 		n)
 			break
 			;;
-		*)
-			echo "Invalid option"
-			;;
 	esac
 done
 
 while :
 do
-	echo -e "Do you wish to ${underline}start the core${normal} of the bespin stack and associated services? (y/n)"
+	echo -e "Do you wish to ${underline}start the core${normal} of the bespin stack and associated services? (Y/n/extra)"
 	read yn
 	case $yn in
-		y)
+		*)
 			shared-services up
 			bespin -s $BESPIN_SERVICES up
 			break
@@ -66,8 +61,14 @@ do
 		n)
 			break
 			;;
-		*)
-			echo "Invalid option"
-			;;
+		extra)
+                        shared-services up
+                        bespin -s $EXTRA up
+                        break
+                        ;;
 	esac
 done
+
+clear
+docker ps
+
