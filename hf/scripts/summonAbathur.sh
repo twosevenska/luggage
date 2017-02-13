@@ -24,8 +24,6 @@ echo -e "${bldgree}Establishing syslinks${normal}"
 ln -s /repos/env ~/env
 ln -s /repos/env/deploy ~/deploy
 ln -s /repos/luggage ~/luggage
-ln -s /repos/go/src/nflex ~/nflex
-ln -s /repos/go/src/kgb ~/kgb
 
 echo -e "${bldgree}Copying files over${normal}"
 
@@ -62,4 +60,4 @@ echo -e "${bldgree}Pulling new containers. Go be productive somewhere else.${nor
 
 
 # echo -e "${bldgree}Installing golang and glide${normal}"
-# 
+#
