@@ -1,6 +1,6 @@
 # luggage
 
-![luggage_logo](http://s11.postimg.org/g8hzy3r7n/91ac4cybeql_sl1500_e1396121119734.jpg)
+![luggage_logo](https://github.com/twosevenska/luggage/blob/master/the_luggage.jpg)
 
 "...half suitcase, half homicidal maniac"
 
