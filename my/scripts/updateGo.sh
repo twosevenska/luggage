@@ -20,8 +20,6 @@ do
 		n)
       echo "${bldblue}Type the version you wish, followed by [ENTER]:${normal}"
       read GO_VERSION
-			break
-			;;
 		*)
       # Install GO
       if [ -d "go$GO_VERSION.linux-amd64.tar.gz" ]; then
@@ -40,4 +38,9 @@ do
 			break
 			;;
 	esac
+
+	echo -e "${bldblue}Please add the following lines to your shell configuration file:${normal}"
+	echo -e "${bldblue}# Golang variables${normal}"
+	echo -e "${bldblue}export GOPATH=/repos/go${normal}"
+	echo -e "${bldblue}export PATH=/usr/local/go/bin:\$PATH:\$GOPATH/bin${normal}"
 done
