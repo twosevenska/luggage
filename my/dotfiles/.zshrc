@@ -84,15 +84,12 @@ setopt RM_STAR_WAIT
 # Zsh has a spelling corrector
 setopt CORRECT
 
-# Setup everything like it was in bash for projects and so one to work
-PATH=$PATH:/repos/env/deploy
-
 # Golang variables
-export GOPATH=/repos/go
+export GOPATH=/Work/go
 export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin
 
 # Aliases
-alias work="cd ~/go/src/"
+alias work="cd ~/Work/go/src/"
 
 # Tmux aliases
 alias ta="tmux attach -t"
