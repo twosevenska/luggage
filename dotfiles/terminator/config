@@ -1,0 +1,54 @@
+[global_config]
+  borderless = True
+  geometry_hinting = False
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  tab_position = hidden
+  title_hide_sizetext = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 47026423-0c61-45a2-a2ed-ea8777d55f57
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 315:106
+      size = 642, 378
+      title = twosevenska@Rawbosky-PPC: ~
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 47026423-0c61-45a2-a2ed-ea8777d55f57
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.35
+    background_image = None
+    background_type = transparent
+    copy_on_selection = True
+    foreground_color = "#839496"
+    icon_bell = False
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Afterglow]]
+    background_color = "#181818"
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    cursor_color = "#cecece"
+    cursor_shape = underline
+    font = Monospace 11
+    foreground_color = "#d0d0d0"
+    icon_bell = False
+    palette = "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

@@ -1,3 +1,6 @@
+# Working Dir
+export WORKDIR=/Work
+
 # Golang variables
-export GOPATH=/Work/go
+export GOPATH=$WORKDIR/go
 export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin
