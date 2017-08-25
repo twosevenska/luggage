@@ -84,8 +84,9 @@ setopt RM_STAR_WAIT
 # Zsh has a spelling corrector
 setopt CORRECT
 
-# Make it so that on ssh we start using tmux
+if [ "$TMUX" = "" ]; then tmux; fi
 
+# Make it so that on ssh we start using tmux
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     tmux attach-session -t Devbox || tmux new-session -s Devbox
 fi

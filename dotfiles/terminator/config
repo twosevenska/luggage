@@ -1,11 +1,61 @@
 [global_config]
+  always_split_with_profile = True
   borderless = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   geometry_hinting = False
   homogeneous_tabbar = False
   scroll_tabbar = True
   tab_position = hidden
   title_hide_sizetext = True
 [keybindings]
+  broadcast_all = None
+  broadcast_group = None
+  broadcast_off = None
+  close_term = None
+  close_window = None
+  copy = <Super>c
+  cycle_next = None
+  cycle_prev = None
+  edit_window_title = None
+  full_screen = None
+  go_down = None
+  go_left = None
+  go_next = None
+  go_prev = None
+  go_right = None
+  go_up = None
+  group_all = None
+  group_all_toggle = None
+  group_tab = None
+  hide_window = None
+  insert_number = None
+  insert_padded = None
+  layout_launcher = None
+  line_up = None
+  move_tab_left = None
+  move_tab_right = None
+  new_tab = None
+  new_terminator = None
+  new_window = None
+  next_tab = None
+  paste = <Super>v
+  prev_tab = None
+  previous_profile = None
+  reset = None
+  reset_clear = None
+  resize_down = None
+  resize_left = None
+  resize_right = None
+  resize_up = None
+  rotate_ccw = None
+  rotate_cw = None
+  scaled_zoom = None
+  split_horiz = None
+  split_vert = None
+  toggle_scrollbar = None
+  toggle_zoom = None
+  ungroup_all = None
+  ungroup_tab = None
 [layouts]
   [[default]]
     [[[child0]]]
@@ -22,7 +72,7 @@
     [[[terminal1]]]
       order = 0
       parent = child0
-      profile = default
+      profile = Afterglow
       type = Terminal
       uuid = 47026423-0c61-45a2-a2ed-ea8777d55f57
 [plugins]
@@ -33,16 +83,19 @@
     background_image = None
     background_type = transparent
     copy_on_selection = True
+    font = Monospace 11
     foreground_color = "#839496"
     icon_bell = False
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
+    use_system_font = False
   [[Afterglow]]
     background_color = "#181818"
     background_darkness = 0.8
     background_image = None
     background_type = transparent
+    copy_on_selection = True
     cursor_color = "#cecece"
     cursor_shape = underline
     font = Monospace 11
@@ -52,3 +105,5 @@
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
+  [[New Profile]]
+    background_image = None
