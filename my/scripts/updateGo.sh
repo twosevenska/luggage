@@ -6,7 +6,7 @@ normal=$(tput sgr0)
 bldorange=${bold}$(tput setaf 202) #  red
 bldblue=${bold}$(tput setaf 045) #  blue
 
-GO_VERSION=1.8.1
+GO_VERSION=1.9
 WORKFOLDER=~/Work
 
 function perform_Update {
@@ -53,28 +53,38 @@ function create_Workplace {
 }
 
 function ask_Workplace {
-	if [ ! -d "$WORKFOLDER/go" ]; then
-		echo -e "${bldblue}Default workspace: ${bldorange}$WORKFOLDER${normal}"
-		echo -e "${bldblue}Do you wish to change? (y/N)${normal}"
-		read yn2
-		case $yn2 in
-			y)
-	      echo "${bldblue}Type the version you wish, followed by [ENTER]:${normal}"
-	      read WORKFOLDER
-				create_Workplace
-				;;
-			*)
-				create_Workplace
-				;;
-		esac
-	fi
+	echo -e "${bldblue}Do you wish to create a new Workspace (First time install only)? (N/y) ${bldorange}$WORKFOLDER${normal}"
+	read yncreate
+	case $yncreate in
+		y)
+			if [ ! -d "$WORKFOLDER/go" ]; then
+				echo -e "${bldblue}Default workspace: ${bldorange}$WORKFOLDER${normal}"
+				echo -e "${bldblue}Do you wish to use another folder? (y/N)${normal}"
+				read yn2
+				case $yn2 in
+					y)
+				echo "${bldblue}Type the folder you wish, followed by [ENTER]:${normal}"
+				read WORKFOLDER
+						create_Workplace
+						;;
+					*)
+						create_Workplace
+						;;
+				esac
+			fi
+			echo -e "${bldblue}Please add the following lines to your shell configuration file:${normal}"
+			echo -e "${bldblue}# Golang variables${normal}"
+			echo -e "${bldblue}export GOPATH=$WORKFOLDERk/go${normal}"
+			echo -e "${bldblue}export PATH=/usr/local/go/bin:\$PATH:\$GOPATH/bin${normal}"
+			;;
+		*)
+			return
+			;;
+	esac
 }
 
 clear
 echo -e "${bldblue}Athena is online and ready to update the Gophers${normal}"
 ask_Update
 ask_Workplace
-echo -e "${bldblue}Please add the following lines to your shell configuration file:${normal}"
-echo -e "${bldblue}# Golang variables${normal}"
-echo -e "${bldblue}export GOPATH=$WORKFOLDERk/go${normal}"
-echo -e "${bldblue}export PATH=/usr/local/go/bin:\$PATH:\$GOPATH/bin${normal}"
+echo -e "${bldblue}Athena has finished updating the Gophers${normal}"
