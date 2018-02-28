@@ -1,5 +1,5 @@
 # Working Dir
-export WORKDIR=~/work
+export WORKDIR=/repos
 
 # Golang variables
 export GOPATH=$WORKDIR/go
