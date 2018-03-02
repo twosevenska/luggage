@@ -52,7 +52,7 @@ ZSH_THEME="vapor-norm"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker tig tmux)
+plugins=(git docker tig)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,8 +84,6 @@ setopt RM_STAR_WAIT
 
 # Zsh has a spelling corrector
 setopt CORRECT
-
-if [ "$TMUX" = "" ]; then tmux; fi
 
 # Make it so that on ssh we start using tmux
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then

@@ -1,5 +1,5 @@
 # Aliases
-alias work-ls="ls $WORKDIR/go/src/"
+alias work-ls='ls $WORKDIR/go/src/'
 
 # Tmux aliases
 alias ta="tmux attach -t"
