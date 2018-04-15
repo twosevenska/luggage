@@ -1,8 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Run the following commands only on OSX
+if [ "$(uname 2> /dev/null)" != "Linux" ]; then
+    # Give priority to the Homebrew installations
+    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+fi
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/twosevenska/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
