@@ -1,0 +1,106 @@
+/*
+ * Set of nice to have customizations for firefox. Currently all jumbled together
+ * since it's mostly copy/paste from other sources
+ */
+
+
+/*
+ * Bookmarks toolbar is visible only on new tab page, just like Chrome.
+ *
+ * Screenshot: https://vimeo.com/235059188
+ * Video: https://vimeo.com/240436456
+ *
+ * Contributor(s): https://www.reddit.com/user/AJtfM7zT4tJdaZsm and Andrei Cristian Petcu
+ *                 https://www.reddit.com/r/FirefoxCSS/comments/7evwow/show_bookmarks_toolbar_only_on_new_tab/
+ */
+
+#main-window #PersonalToolbar {
+  visibility: collapse !important;
+}
+
+#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+#main-window[title^="about:newtab"] #PersonalToolbar,
+#main-window[title^="New Tab"] #PersonalToolbar,
+#main-window[title^="Nightly"] #PersonalToolbar {
+  visibility: visible !important;
+}
+
+
+/*
+ * Move the hamburger menu to the top left, before the first tab
+ *
+ * Contributor(s): Alex Vallat
+ */
+
+#PanelUI-button {
+  -moz-box-ordinal-group: 0;
+  border-left: none !important;
+  position: absolute;
+}
+
+:root[uidensity=compact] #PanelUI-button {
+  margin-top: -28px;
+}
+
+#PanelUI-button {
+  margin-top: -30px;
+}
+
+:root[uidensity=touch] #PanelUI-button {
+  margin-top: -36px;
+}
+
+#TabsToolbar {
+  /* Ensure the padding is always present even when maximized */
+  padding-inline-start: 40px !important;
+}
+
+
+/* Colored folders for bookmark sidebar, toolbar, menu button, classic menu
+   Updated Dec. 19, 2017 */
+
+  /* Standard folder */
+#bookmarks-view treechildren::-moz-tree-image(container),
+#PlacesToolbarItems toolbarbutton[container="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[container="true"] .menu-iconic-left,
+#BMB_bookmarksPopup menu[container="true"] .menu-iconic-icon,
+#bookmarksMenu menu[container="true"] .menu-iconic-icon {
+  fill: #e8bb00 !important; /* slightly muted gold */
+}
+  /* Live Bookmark (RSS Feed) */
+#bookmarks-view treechildren::-moz-tree-image(container, livemark),
+#PlacesToolbarItems toolbarbutton[container="true"][livemark="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[container="true"][livemark="true"] .menu-iconic-left,
+#BMB_bookmarksPopup menu[container="true"][livemark="true"] .menu-iconic-icon,
+#bookmarksMenu menu[container="true"][livemark="true"] .menu-iconic-icon {
+  fill: orange !important;
+}
+  /* Smart bookmark folder */
+#bookmarks-view treechildren::-moz-tree-image(container, query),
+#PlacesToolbarItems toolbarbutton[container="true"][query="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[container="true"][query="true"] .menu-iconic-left,
+#BMB_bookmarksPopup menu[container="true"][query="true"] .menu-iconic-icon,
+#bookmarksMenu menu[container="true"][query="true"] .menu-iconic-icon {
+  fill: #69c !important; /* similar to blue smart folder color */
+}
+  /* These "containers" are SVG in the sidebar, not yet on the menu */
+#bookmarks-view treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu) {
+  fill: olive !important;
+}
+#bookmarks-view treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar) {
+  fill: olive !important;
+}
+#bookmarks-view treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks) {
+  fill: olive !important;
+}
+/* Avoid overriding classic Bookmarks Toolbar and Other Bookmarks icons in menus */
+#BMB_bookmarksPopup #BMB_bookmarksToolbar.menu-iconic-icon, 
+#bookmarksMenu #bookmarksToolbarFolderMenu.menu-iconic-icon {
+  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png") !important;
+}
+#BMB_bookmarksPopup #BMB_unsortedBookmarks.menu-iconic-icon, 
+#bookmarksMenu #menu_unsortedBookmarks.menu-iconic-icon {
+  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png") !important;
+}
+
+
