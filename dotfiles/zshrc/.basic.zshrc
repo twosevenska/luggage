@@ -5,6 +5,9 @@
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
     # Give priority to the Homebrew installations
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+    # Syntax Highlighting 
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # Path to your oh-my-zsh installation.
@@ -28,6 +31,9 @@ ZSH_THEME="vapor-norm"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Don't prompt the user for permission to update zsh
+DISABLE_UPDATE_PROMPT=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -58,7 +64,7 @@ ZSH_THEME="vapor-norm"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker tig)
+plugins=(git sudo docker tig)
 
 source $ZSH/oh-my-zsh.sh
 

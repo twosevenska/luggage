@@ -2,4 +2,11 @@
 set -x -g TERM "xterm-256color"
 
 # Give priority to the Homebrew installations
-set -x PATH /usr/local/sbin $PATH
+if test -e "/usr/local/bin";
+	set -x PATH /usr/local/bin $PATH
+end
+
+# Give priority to the Homebrew installations
+if test -e "/usr/local/sbin";
+	set -x PATH /usr/local/sbin $PATH
+end
