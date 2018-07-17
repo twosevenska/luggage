@@ -1,15 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Run the following commands only on OSX
-if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-    # Give priority to the Homebrew installations
-    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-    # Syntax Highlighting 
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
 
@@ -30,7 +21,7 @@ ZSH_THEME="vapor-norm"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=15
 
 # Don't prompt the user for permission to update zsh
 DISABLE_UPDATE_PROMPT=true
@@ -45,7 +36,7 @@ DISABLE_UPDATE_PROMPT=true
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -64,7 +55,7 @@ DISABLE_UPDATE_PROMPT=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo docker tig)
+plugins=(tig)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,6 +89,6 @@ setopt RM_STAR_WAIT
 setopt CORRECT
 
 # Make it so that on ssh we start using tmux
-if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-    tmux attach-session -t Devbox || tmux new-session -s Devbox
-fi
+# if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+#     tmux attach-session -t Devbox || tmux new-session -s Devbox
+# fi
