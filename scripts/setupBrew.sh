@@ -31,6 +31,7 @@ brew install tmux
 brew install jq
 brew tap caskroom/fonts
 brew cask install font-droidsansmono-nerd-font-mono
+brew install htop
 
 # Install download utilities
 brew install wget
