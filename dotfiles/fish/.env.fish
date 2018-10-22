@@ -1,5 +1,5 @@
 # Setup Workspace
-set -g -x WORKSPACE ~/repos
+set -g -x WORKSPACE /repos
 
 # Golang variables
 if test -e "$WORKSPACE/go"
