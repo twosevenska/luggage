@@ -9,5 +9,5 @@ end
 
 # Loads any system especific configs and potentially overwrite previous stuff
 if test -e ~/.extras.fish
-    source ~/.extra.fish
+    source ~/.extras.fish
 end
