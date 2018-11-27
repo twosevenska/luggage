@@ -28,3 +28,11 @@ if [ "$TERM_PROGRAM" != "vscode" ]
     export PIPENV_SHELL_FANCY=1
 end
 export PIPENV_MAX_SUBPROCESS=32
+
+# We need this because in ubuntu machines this is not automagically handled
+if test -d ~/.pyenv
+    switch (uname)
+        case Linux
+            set PATH $PATH ~/.pyenv/bin/
+    end
+end
