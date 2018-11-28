@@ -13,13 +13,13 @@ if [ -d ~/.config/fish ]; then
     if [ -f ~/.config/fish/config.fish ]; then
         cp ~/luggage/dotfiles/fish/config.fish ~/.config/fish/config.fish
     else
-        ln -sfn ~/luggage/dotfiles/fish/config.fish ~/.config/fish/config.fish
+        ln -sf ~/luggage/dotfiles/fish/config.fish ~/.config/fish/config.fish
     fi
 
     if [ -f ~/.config/fish/fishfile ]; then
         cp ~/luggage/dotfiles/fish/fishfile ~/.config/fish/fishfile
     else
-        ln -sfn ~/luggage/dotfiles/fish/fishfile ~/.config/fish/fishfile
+        ln -sf ~/luggage/dotfiles/fish/fishfile ~/.config/fish/fishfile
     fi
 else
     echo -e "${bldgree}Fish does not seem to be ready!${normal}"
