@@ -1,0 +1,12 @@
+nohup.out
+
+# Editor specific
+.vscode
+
+# Python specific
+Pipfile
+Pipfile.lock
+.python-version
+
+# OSX specific
+.DS_Store
