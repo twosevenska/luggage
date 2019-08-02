@@ -36,3 +36,8 @@ if test -d ~/.pyenv
             set PATH $PATH ~/.pyenv/bin/
     end
 end
+
+# Load our envi script if it exists
+if test -e "$WORKSPACE/envi"
+    set PATH $PATH $WORKSPACE/envi/
+end

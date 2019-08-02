@@ -1,4 +1,4 @@
-#! /usr/bin/fish
+#! /usr/local/bin/fish
 
 fisher add oh-my-fish/plugin-bang-bang
 fisher add edc/bass
