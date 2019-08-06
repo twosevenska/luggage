@@ -10,3 +10,7 @@ Pipfile.lock
 
 # OSX specific
 .DS_Store
+
+# Envi specific
+envi.json
+
