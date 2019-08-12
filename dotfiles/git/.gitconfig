@@ -1,2 +1,5 @@
 [core]
 	excludesfile = ~/luggage/dotfiles/git/.gitignore_global
+
+[include]
+	path = ~/.extras.gitconfig
