@@ -1,5 +1,5 @@
 # Setup Workspace
-set -g -x WORKSPACE /repos
+set -g -x WORKSPACE ~/repos
 
 # Golang variables
 if test -e "$WORKSPACE/go"
@@ -17,7 +17,7 @@ end
 
 # NVM function
 function nvm
-    bass source /usr/local/opt/nvm/nvm.sh --no-use ';' nvm $argv
+    replay source /usr/local/opt/nvm/nvm.sh --no-use ';' nvm $argv
 end
 
 # Python stuff
