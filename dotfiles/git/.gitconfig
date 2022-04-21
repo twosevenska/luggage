@@ -3,3 +3,7 @@
 
 [include]
 	path = ~/.extras.gitconfig
+
+[user]
+	name = Goncalo Barroso
+	email = goncalo.barroso@infosum.com

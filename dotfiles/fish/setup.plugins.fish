@@ -1,4 +1,4 @@
-#! /usr/local/bin/fish
+#!/usr/bin/env fish
 
 fisher install oh-my-fish/plugin-bang-bang
 fisher install jorgebucaran/replay.fish
@@ -9,4 +9,4 @@ fisher install oh-my-fish/plugin-extract
 fisher install oh-my-fish/plugin-osx
 fisher install fisherman/pipenv-fish
 fisher install twosevenska/pyenv
-fisher install spentacular/fish-theme-sh
+fisher install IlanCosman/tide@v5

@@ -7,4 +7,4 @@ oh-my-fish/plugin-extract
 oh-my-fish/plugin-osx
 fisherman/pipenv-fish
 twosevenska/pyenv
-spentacular/fish-theme-sh
+fisher install IlanCosman/tide@v5

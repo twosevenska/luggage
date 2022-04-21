@@ -1,0 +1,6 @@
+[user]
+name = Twosevenska
+email = twosevenska@gmail.com
+
+[core]
+sshCommand = ssh -i ~/.ssh/id_github_personal
