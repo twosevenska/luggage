@@ -13,6 +13,7 @@ echo -e "${bldorange}Setting up Homebrew!${normal}"
 # Install brew basics (auto-updating)
 brew install terminal-notifier
 brew tap domt4/autoupdate
+mkdir -p ~/Library/LaunchAgents
 brew autoupdate --start --upgrade --cleanup --enable-notification
 
 # Install VM/Deploy tools
