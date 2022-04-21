@@ -13,10 +13,10 @@ echo -e "${bldorange}Setting up Homebrew!${normal}"
 # Install brew basics (auto-updating)
 brew install terminal-notifier
 brew tap domt4/autoupdate
-brew autoupdate --start --upgrade --cleanup --enable-notifications
+brew autoupdate --start --upgrade --cleanup --enable-notification
 
 # Install VM/Deploy tools
-brew install caskroom/cask/virtualbox
+brew cask install --force virtualbox
 brew install ansible
 brew install docker
 
@@ -25,12 +25,11 @@ brew install git
 brew install tig
 
 # Install FANCY shell stuff
-brew cask install iterm2
 brew install fish
 brew install tmux
 brew install jq
-brew tap caskroom/fonts
-brew cask install font-droidsansmono-nerd-font-mono
+brew tap homebrew/cask-fonts 
+brew install font-droidsansmono-nerd-font-mono
 brew install htop
 
 # Install download utilities
@@ -46,11 +45,9 @@ brew install nvm
 
 # Install Golang utlitlies
 brew install go
-brew install dep
-brew install glide
 
 # Install Network utlitlies
-brew install wireshark --with-qt
+brew install --cask wireshark
 
 # Code building libraries
 brew install librdkafka
