@@ -30,7 +30,7 @@ brew install fish
 brew install tmux
 brew install jq
 brew tap homebrew/cask-fonts 
-brew install font-droidsansmono-nerd-font-mono
+brew install --cask font-droid-sans-mono-nerd-font
 brew install htop
 
 # Install download utilities
